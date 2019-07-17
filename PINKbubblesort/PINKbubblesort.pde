@@ -10,13 +10,13 @@ void setup() {
     array[i] = (int)random(maxVal);
   }
   frameRate(speed);
-  colorMode(RGB, 255, 200, 200);
+  colorMode(RGB, 255, 700, 900);
   }
   
   int i=0;
   
 void draw(){
-  background(255);
+  background(0);
   
   for (int j=0; j<array.length; j++) {
     if (array[i]>array[j]) {
@@ -31,8 +31,8 @@ void draw(){
   
   
   float c = map(array[j], 0, maxVal, 0, 360);
-  stroke(c, 100, 3500);
-  strokeWeight(70);
+  stroke(c, 70, 70);
+  strokeWeight(30);
   
   
   line(xStart, 25+lineSpace*j, xStart+5*array[j], 25+lineSpace*j);
