@@ -13,13 +13,14 @@ void  setup (){
   velX2 = 9;
   velX3 = 9;
   size(1000, 1000);
+  background(200, 255, 255);
   colorMode(HSB);
 }
 
 float c;
 void draw(){
-  background(c, 255, 255);
-  fill(c);
+  background(130, 255, 255);
+  fill (c, 255, 255);
   ellipse(x, y, 70, 70);
   ellipse(x1, y1, 70, 70);
   ellipse(x2, y2, 70, 70);
@@ -36,4 +37,10 @@ void draw(){
   if (c >=255) c=0;
   else c++;
  
+}
+void mousePressed() {
+  c = (c + 1) % 9;
+  velX = (velX +20);
+  velX2 = (velX +36);
+  velX3 = (velX +100); 
 }
